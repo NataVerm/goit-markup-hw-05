@@ -114,10 +114,12 @@ address {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -161,6 +163,7 @@ address {
   display: inline-flex;
   margin-right: 10px;
   fill: var(--primary-text-color-theme-light);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-item:not(:last-child) {
@@ -180,6 +183,7 @@ address {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-active-page {
@@ -196,6 +200,7 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-light);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-mail:hover .contact-icon,
@@ -257,11 +262,12 @@ address {
   color: var(--primary-text-color-theme-dark);
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
-  background: var(--secondary-button-color);
+  background-color: var(--secondary-button-color);
 }
 
 /* ====== END HERO ======*/
@@ -400,6 +406,7 @@ address {
   width: 106px;
   height: 60px;
   fill: #AFB1B8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ====== END CLIENTS ======*/
@@ -436,6 +443,7 @@ address {
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color-theme-dark);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list-address {
@@ -496,6 +504,7 @@ address {
   line-height: 1.63;
   cursor: pointer;
   background-color: var(--primary-backgraund-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-filter-btn:hover,
@@ -516,6 +525,7 @@ address {
 }
 .portfolio-works-list-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-works-list-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -544,3 +554,42 @@ address {
 }
 
 /* ====== END PORTFOLIO HERO ======*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: ;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 580px;
+  background-color: var(--primary-text-color-theme-dark);
+}
+.modal-close-btn {
+position: absolute;
+top: 8px;
+right: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+border: 1px solid rgba(0, 0, 0, 0.1);
+background-color: transparent;
+padding: 0;
+cursor: pointer;
+}
